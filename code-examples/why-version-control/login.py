@@ -18,7 +18,7 @@ request = Request()
 
 valid_user = User.sign_in(
     request.form.get('email'),
-    request.form.get('password'),
+    request.form.get('password_field'),
 )
 
 if not valid_user:

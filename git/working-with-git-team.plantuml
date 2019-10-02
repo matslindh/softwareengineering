@@ -1,0 +1,18 @@
+@startuml
+start
+split
+->Mats;
+    :Legg til filer;
+    :Gjør endringer;
+    :Commit;
+    :Push;
+split again
+->Lars-Erik;
+    :Legg til filer;
+    :Gjør endringer;
+    :Commit;
+    :Push;
+end split
+:Merge;
+stop
+@enduml

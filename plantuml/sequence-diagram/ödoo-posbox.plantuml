@@ -1,0 +1,13 @@
+@startuml
+PosBoxJS --> PosBox: Kunde vil betale med kort
+PosBox -> Bankterminal: Ta betalt x kr
+Bankterminal --> PosBox: Betaling OK, her er data
+PosBox -> PosBoxJS: Her er metadata om betalingen
+PosBoxJS -> PosBoxJS: Lagre metadata til Ordre
+PosBoxJS --> PosBox: Skriv ut data
+PosBox -> Printer: Skriv ut kvittering
+Printer --> PosBox: Print OK
+PosBox --> PosBoxJS: Print OK
+PosBoxJS -> MainOdoo: Send ordredata
+MainOdoo --> PosBoxJS: Data stored
+@enduml

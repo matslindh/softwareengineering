@@ -1,0 +1,10 @@
+@startuml
+Customer -> VendingMachine: Select product
+VendingMachine -> Customer: Display price of selected product
+Customer -> VendingMachine: Inserts card
+VendingMachine -> Customer: Enter pin code
+Customer -> VendingMachine: Pin code entered
+VendingMachine -> PaymentProvider: Validate payment
+PaymentProvider -> VendingMachine: Payment OK
+VendingMachine -> Customer: Vend selected product
+@enduml

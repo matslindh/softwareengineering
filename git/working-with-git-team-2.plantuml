@@ -1,0 +1,21 @@
+@startuml
+actor Mats
+database GitHub
+actor "Lars-Erik"
+Mats -> GitHub: git clone
+GitHub -> Mats
+"Lars-Erik" -> GitHub: git clone
+GitHub -> "Lars-Erik"
+activate Mats
+Mats -> Mats: Legg til / endre
+activate "Lars-Erik"
+"Lars-Erik" -> "Lars-Erik": Legg til / endre
+Mats -> Mats: Commit
+Mats -> GitHub: git push
+deactivate Mats
+"Lars-Erik" -> GitHub: git pull
+GitHub -> "Lars-Erik"
+"Lars-Erik" -> "Lars-Erik": Endringer merges
+"Lars-Erik" -> GitHub: git push
+deactivate "Lars-Erik"
+@enduml

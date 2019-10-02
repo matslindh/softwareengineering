@@ -1,0 +1,10 @@
+@startuml
+left to right direction
+:Technician: --> (Refill goods)
+:Technician: --> (Adjust prices)
+:Technician: --> (Check connectivity to internet and service)
+:Technician: --> (Check functionality of vending operation)
+:Technician: --> (Vend product for testing)
+:Technician: --> (Reset vending machine)
+:Technician: --> (Upgrade firmware and software)
+@enduml

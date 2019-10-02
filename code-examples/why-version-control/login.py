@@ -23,4 +23,3 @@ valid_user = User.sign_in(
 
 if not valid_user:
     abort(403, 'Invalid user given')
-

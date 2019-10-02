@@ -1,0 +1,17 @@
+@startuml
+Client -> Frontend: Video upload
+Frontend -> Database: Save metadata
+Database --> Frontend: Metadata saved
+Frontend --> Client: Status update
+Frontend --> Client: Status update
+Frontend -> Storage: Save file to cloud storage
+Storage --> Frontend: We're OK
+Frontend -> Encoding: Start encoding video versions
+Frontend --> Client: Encoding has started
+Client -> Frontend: Edit metadata
+Frontend -> Database: Save metadata
+Database -> Frontend: Metadata saved
+Frontend -> Frontend: Wait for encoding
+Encoding --> Frontend: Videos has been encoded
+Frontend --> Client: Everything is A-OK
+@enduml

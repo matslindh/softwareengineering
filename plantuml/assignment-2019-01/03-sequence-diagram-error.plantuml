@@ -1,0 +1,14 @@
+@startuml
+Customer -> VendingMachine: Select product
+VendingMachine -> Customer: Display price of selected product
+Customer -> VendingMachine: Inserts card
+VendingMachine -> Customer: Enter pin code
+Customer -> VendingMachine: Pin code entered
+VendingMachine -> PaymentProvider: Validate payment
+PaymentProvider -> VendingMachine: Payment failed
+VendingMachine -> Customer: Display error message
+Customer -> VendingMachine: Enter pin again
+VendingMachine -> PaymentProvider: Validate payment
+PaymentProvider -> VendingMachine: Payment failed
+VendingMachine -> Customer: Display error message and reset state
+@enduml

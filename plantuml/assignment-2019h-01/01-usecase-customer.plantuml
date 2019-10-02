@@ -1,0 +1,8 @@
+@startuml
+left to right direction
+:Bruker: --> (Lage konto)
+:Bruker: --> (Logge inn på konto)
+:Bruker: --> (Søke etter innhold)
+:Bruker: --> (Se på innhold)
+:Bruker: --> (Endre kundeforhold)
+@enduml

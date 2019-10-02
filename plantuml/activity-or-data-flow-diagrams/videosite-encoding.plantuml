@@ -1,0 +1,13 @@
+@startuml
+start
+:Video uploaded;
+if (isVideoHD) then (yes)
+    :EncodeAllFormats;
+else
+    :EncodeBasicFormats;
+endif
+while (VideosStillEncoding)
+    :Wait for videos to be encoded;
+endwhile (All done)
+end
+@enduml

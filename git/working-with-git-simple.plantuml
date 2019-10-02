@@ -1,0 +1,11 @@
+@startuml
+(*) -->[ git init] "Initialisér repo"
+(*) -->[ git clone] "Klone eksisterende repo"
+"Initialisér repo" --> "Endre eller legg til innhold lokalt"
+"Klone eksisterende repo" --> "Endre eller legg til innhold lokalt"
+-->[git add/endre filer] "Endre eller legg til innhold lokalt"
+-->[ git commit] "Commit endringene"
+-->[ git pull] "Hent inn endringer fra hoved/annet repo"
+-->[ git push] "Last opp endringene til hoved/annet repo"
+--> (*)
+@enduml

@@ -1,5 +1,5 @@
 @startuml
 left to right direction
-:Kunde: --> (Buy product)
-:Kunde: --> (Check price for product)
+:Customer: --> (Buy product)
+:Customer: --> (Check price for product)
 @enduml

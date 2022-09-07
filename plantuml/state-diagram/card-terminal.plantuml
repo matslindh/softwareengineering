@@ -1,0 +1,17 @@
+@startuml
+[*] -down-> WaitingForPointofSale
+WaitingForPointofSale -> WaitingForCard : Transaction details
+
+WaitingForCard -> WaitingForPointofSale : Cancel pressed
+WaitingForCard -down-> EnterPinCode : Card presented
+
+EnterPinCode : Display pressed digits
+EnterPinCode -> EnterPinCode : Number pressed
+EnterPinCode -down-> VerifyCard : OK pressed
+EnterPinCode -> WaitingForPointofSale : Cancel pressed
+
+VerifyCard -> WaitingForPointofSale : Transaction state received and transferred
+@enduml
+
+
+

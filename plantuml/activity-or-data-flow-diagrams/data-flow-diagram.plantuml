@@ -1,0 +1,9 @@
+@startuml
+:User's Computer]
+:Upload video;
+:Video stored]
+:Encode video;
+:Video versions]
+:Distribute to storage;
+:Available for viewing]
+@enduml

@@ -1,0 +1,16 @@
+@startuml
+skinparam componentStyle rectangle
+
+component [Online ordering] <<System>>
+component [Mail delivery] <<System>>
+component [Tracking] <<System>>
+component [Parcel delivery] <<System>>
+component [Point of Sale] <<System>>
+component [Totally Not Posten] #LightGrey
+
+[Online ordering] -- [Totally Not Posten]
+[Mail delivery] -- [Totally Not Posten]
+[Tracking] -- [Totally Not Posten]
+[Parcel delivery] -up- [Totally Not Posten]
+[Point of Sale] -up- [Totally Not Posten]
+@enduml

@@ -1,13 +1,11 @@
 @startuml
-PosBoxJS --> PosBox: Kunde vil betale med kort
-PosBox -> Bankterminal: Ta betalt x kr
-Bankterminal --> PosBox: Betaling OK, her er data
-PosBox -> PosBoxJS: Her er metadata om betalingen
-PosBoxJS -> PosBoxJS: Lagre metadata til Ordre
-PosBoxJS --> PosBox: Skriv ut data
-PosBox -> Printer: Skriv ut kvittering
-Printer --> PosBox: Print OK
-PosBox --> PosBoxJS: Print OK
-PosBoxJS -> MainOdoo: Send ordredata
-MainOdoo --> PosBoxJS: Data stored
+"Kasse" --> "Kasse HW": Kunde vil betale med kort
+"Kasse HW" -> Bankterminal: Ta betalt x kr
+Bankterminal --> "Kasse HW": Betaling OK, her er data
+"Kasse HW" -> "Kasse": Her er metadata om betalingen
+"Kasse" -> "Kasse": Lagre metadata til Ordre
+"Kasse" --> "Kasse HW": Skriv ut data
+"Kasse HW" -> Printer: Skriv ut kvittering
+Printer --> "Kasse HW": Print OK
+"Kasse HW" --> "Kasse": Print OK
 @enduml

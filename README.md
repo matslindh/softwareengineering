@@ -1,0 +1,1 @@
+Diverse eksempler og kodebiter som brukes / lages til Software Engineering-forelesningene på Høgskolen i Østfold.

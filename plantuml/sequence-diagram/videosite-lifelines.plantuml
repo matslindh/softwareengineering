@@ -1,17 +1,26 @@
 @startuml
 Client -> Frontend: Video upload
+activate Frontend
 Frontend -> Database: Save metadata
+activate Database
 Database --> Frontend: Metadata saved
+deactivate Database
 Frontend --> Client: Status update
 Frontend -> Storage: Save file to cloud storage
+activate Storage
 Storage --> Frontend: We're OK
+deactivate Storage
 Frontend --> Client: Status update
 Frontend -> Encoding: Start encoding video versions
+activate Encoding
 Frontend --> Client: Encoding has started
 Client -> Frontend: Edit metadata
 Frontend -> Database: Save metadata
+activate Database
 Database -> Frontend: Metadata saved
+deactivate Database
 Frontend -> Frontend: Wait for encoding
 Encoding --> Frontend: Videos has been encoded
+deactivate Encoding
 Frontend --> Client: Everything is A-OK
 @enduml

@@ -1,0 +1,32 @@
+@startuml
+actor Bruker
+Bruker -> Kasseterminal: Start handel
+activate Kasseterminal
+Kasseterminal -> Backend: Start transaksjon
+activate Backend
+database Database
+Backend -> Database: Opprett transaksjon
+activate Database
+Database --> Backend: TransaksjonsID
+deactivate Database
+Backend --> Kasseterminal: TransaksjonsID
+deactivate Backend
+
+Kasseterminal --> Bruker: Start scanning
+deactivate Kasseterminal
+Bruker -> Strekkodescanner: Scan produkt
+activate Strekkodescanner
+Strekkodescanner --> Kasseterminal: Strekkode
+deactivate Strekkodescanner
+activate Kasseterminal
+Kasseterminal -> Backend: Slå opp strekkode
+activate Backend
+Backend -> Database: Hent produkt
+activate Database
+Database --> Backend: Produkt
+deactivate Database
+Backend --> Kasseterminal: Produktet
+deactivate Backend
+Kasseterminal -> Kasseterminal: Legg til i liste
+Kasseterminal --> Bruker: Oppdatert handlevogn
+@enduml

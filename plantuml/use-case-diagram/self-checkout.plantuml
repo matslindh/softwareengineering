@@ -1,0 +1,13 @@
+@startuml
+left to right direction
+:Kunde: --> (Scanne vare fra strekkode)
+:Kunde: --> (Søke etter vare)
+(Søke etter vare) --> (Veie vare)
+(Søke etter vare) --> (Legge til vare)
+:Kunde: --> (Ta bort vare)
+:Kunde: --> (Betale for handlekurven)
+(Betale for handlekurven) --> (Bankterminal)
+(Betale for handlekurven) --> (Mobilapplikasjon)
+:Kunde: --> (Få kvittering)
+:Kunde: --> (Bippe kvittering)
+@enduml
